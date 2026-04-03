@@ -1,0 +1,11 @@
+/* ==UserStyle==
+@name         Google AI Block
+@description  Blocks the Google search LLM summary
+@namespace    https://github.com/DaveDuck321/
+@author       DaveDuck
+@version      0.0.1
+@preprocessor default
+==/UserStyle== */
+@-moz-document domain("google.com") {
+div:has(+div[role="main"]) {display: none;}
+}
