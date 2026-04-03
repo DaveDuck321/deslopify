@@ -1,0 +1,16 @@
+/* ==UserStyle==
+@name         Youtube Shorts Block
+@description  Hides Youtube shorts
+@namespace    https://github.com/DaveDuck321/
+@author       DaveDuck
+@version      0.0.1
+@preprocessor default
+==/UserStyle== */
+@-moz-document domain("youtube.com") {
+ytd-guide-entry-renderer:has(> a[title="Shorts"]) {
+    display: none;
+}
+ytd-rich-section-renderer:has(#dismissible) {
+    display: none;
+}
+}
