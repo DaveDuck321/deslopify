@@ -3,14 +3,23 @@
 @description  Hides Youtube shorts
 @namespace    https://github.com/DaveDuck321/
 @author       DaveDuck
-@version      0.0.1
+@version      0.0.2
 @preprocessor default
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
+/* Desktop */
 ytd-guide-entry-renderer:has(> a[title="Shorts"]) {
     display: none;
 }
 ytd-rich-section-renderer:has(#dismissible) {
+    display: none;
+}
+
+/* Mobile */
+ytm-rich-section-renderer:has(div.ytGridShelfViewModelGridShelfItem) {
+    display: none;
+}
+ytm-rich-section-renderer:has(yt-post-header) {
     display: none;
 }
 }
