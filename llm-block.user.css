@@ -3,9 +3,17 @@
 @description  Blocks the Google search LLM summary
 @namespace    https://github.com/DaveDuck321/
 @author       DaveDuck
-@version      0.0.1
+@version      0.0.2
 @preprocessor default
 ==/UserStyle== */
 @-moz-document domain("google.com") {
-div:has(+div[role="main"]) {display: none;}
+/* Desktop */
+div:has(+div[role="main"]) {
+    display: none;
+}
+
+/* Mobile */
+div[data-lhcontainer="1"]:has(div[aria-label="Show more AI Overview"]) {
+    display: none;
+}
 }
